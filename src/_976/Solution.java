@@ -44,5 +44,7 @@ class Solution {
         Solution solution = new Solution();
         int[] A = {3,2,3,4};
         System.out.println(solution.largestPerimeter(A));
+
+        System.out.println(Math.ceil(3/(float) 2));
     }
 }
