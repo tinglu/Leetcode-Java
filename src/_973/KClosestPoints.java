@@ -47,21 +47,6 @@ public class KClosestPoints {
         return results;
     }
 
-    void printSet(Set<int[]> results) {
-        for (int[] p : results) {
-            System.out.print(String.format("[%d,%d]", p[0], p[1]));
-        }
-        System.out.println("");
-    }
-
-    void printArray(int[][] A) {
-        for (int[] p : A) {
-            System.out.print(String.format("[%d,%d]", p[0], p[1]));
-        }
-        System.out.println("");
-    }
-
-
     public static void main(String args[]) {
         KClosestPoints sol = new KClosestPoints();
 //        int[][] A = {{0, 1}, {1, 0}};
