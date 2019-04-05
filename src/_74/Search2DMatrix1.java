@@ -1,7 +1,7 @@
 package _74;
 
 public class Search2DMatrix1 {
-//    Naive iterate  O(m*n)
+//    My naive iterate  O(m+n)
 //    public boolean searchMatrix(int[][] matrix, int target) {
 //        if (matrix.length <= 0) return false;
 //        if (matrix[0].length <= 0) return false;
