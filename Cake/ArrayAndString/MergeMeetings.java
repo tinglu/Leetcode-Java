@@ -1,4 +1,4 @@
-package MergeMeetings;
+package ArrayAndString;
 
 import org.junit.Test;
 import org.junit.runner.JUnitCore;
@@ -9,7 +9,7 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class Solution {
+public class MergeMeetings {
 
     public static class Meeting {
 
@@ -195,7 +195,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(Solution.class);
+        Result result = JUnitCore.runClasses(MergeMeetings.class);
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
         }
