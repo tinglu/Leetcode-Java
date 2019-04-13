@@ -1,18 +1,16 @@
 package _384;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 // Brute force
-//class Solution {
+//class ReverseStringInPlace {
 //    private int[] array;
 //    private int[] orgNums;
 //    private Random random = new Random();
 //
 //
-//    public Solution(int[] nums) {
+//    public ReverseStringInPlace(int[] nums) {
 //        array = nums;
 //        orgNums = array.clone();
 //    }
@@ -49,7 +47,7 @@ import java.util.Random;
 //
 //    public static void main(String args[]) {
 //        int[] nums = {1,2,3};
-//        Solution obj = new Solution(nums);
+//        ReverseStringInPlace obj = new ReverseStringInPlace(nums);
 //        int[] param_1 = obj.reset();
 //        int[] param_2 = obj.shuffle();
 //        System.out.println(Arrays.toString(param_1));
@@ -60,13 +58,13 @@ import java.util.Random;
 //}
 
 // Fisher-Yates Algorithm
-class Solution {
+class ShuffleAnArray {
     private int[] array;
     private int[] orgNums;
     private Random random = new Random();
 
 
-    public Solution(int[] nums) {
+    public ShuffleAnArray(int[] nums) {
         array = nums;
         orgNums = nums.clone();
     }
@@ -103,7 +101,7 @@ class Solution {
 
     public static void main(String args[]) {
         int[] nums = {1,2,3};
-        Solution obj = new Solution(nums);
+        ShuffleAnArray obj = new ShuffleAnArray(nums);
         int[] param_1 = obj.reset();
         System.out.println(Arrays.toString(param_1));
         System.out.println(Arrays.toString(obj.shuffle()));
@@ -115,12 +113,12 @@ class Solution {
 
 // Wrong: not equally chosen
 //
-//class Solution {
+//class ReverseStringInPlace {
 //    int[] orgNums;
 //    Random random;
 //
 //
-//    public Solution(int[] nums) {
+//    public ReverseStringInPlace(int[] nums) {
 //        orgNums = nums;
 //        random = new Random();
 //    }
@@ -153,7 +151,7 @@ class Solution {
 //
 //    public static void main(String args[]) {
 //        int[] nums = {1,2,3};
-//        Solution obj = new Solution(nums);
+//        ReverseStringInPlace obj = new ReverseStringInPlace(nums);
 //        int[] param_1 = obj.reset();
 //        int[] param_2 = obj.shuffle();
 //        System.out.println(Arrays.toString(param_1));
