@@ -2,11 +2,11 @@ package _395;
 
 import java.util.*;
 
-//395. Longest Substring with At Least K Repeating Characters
-
+// TODO: 395. Longest Substring with At Least K Repeating Characters
+//
 // https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/discuss/87739/Java-Strict-O
-// (N)-Two-Pointer-Solution
-class Solution {
+// (N)-Two-Pointer-ReverseStringInPlace
+class LongestSubstringWithAtLeastKRepeatingCharacters {
     public int longestSubstring(String s, int k) {
         char[] str = s.toCharArray();
         int max = 0, i, j, idx, unique, noLessThanK;
@@ -42,7 +42,7 @@ class Solution {
     }
 
     public static void main(String args[]) {
-        Solution solution = new Solution();
+        LongestSubstringWithAtLeastKRepeatingCharacters solution = new LongestSubstringWithAtLeastKRepeatingCharacters();
         System.out.println(solution.longestSubstring("a", 1) == 1);
         System.out.println(solution.longestSubstring("ababacb", 3) == 0);
         System.out.println(solution.longestSubstring("aabcabb", 3) == 0);
@@ -52,7 +52,7 @@ class Solution {
 }
 
 // Wrong...
-//class Solution {
+//class ReverseStringInPlace {
 //    public int longestSubstring(String s, int k) {
 //        Map<Character, Integer> stringCount = new HashMap<>();
 //        char[] chars = s.toCharArray();
@@ -130,7 +130,7 @@ class Solution {
 //    }
 //
 //    public static void main(String args[]) {
-//        Solution solution = new Solution();
+//        ReverseStringInPlace solution = new ReverseStringInPlace();
 //        System.out.println(solution.longestSubstring("a", 1) == 1);
 //        System.out.println(solution.longestSubstring("ababacb", 3) == 0);
 //        System.out.println(solution.longestSubstring("aabcabb", 3) == 0);
