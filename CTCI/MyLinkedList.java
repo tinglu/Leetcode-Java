@@ -1,5 +1,3 @@
-package MyThread;
-
 public class MyLinkedList {
     //    class Node {
     //        int data;

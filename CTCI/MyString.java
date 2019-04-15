@@ -1,5 +1,3 @@
-package MyThread;
-
 import java.util.Arrays;
 
 public class MyString {
