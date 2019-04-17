@@ -57,12 +57,15 @@ class MyThread extends Thread {
 public class TestThread2 {
     public static void main(String[] args) {
         // Same object
-        Employee lisa = new Employee("Lisa", 32);
-        MyThread thread1 = new MyThread("MyThread1", lisa);
-        MyThread thread2 = new MyThread("MyThread2", lisa);
-
-        thread1.start();
-        thread2.start();
+//        Employee lisa = new Employee("Lisa", 32);
+//        MyThread thread1 = new MyThread("MyThread1", lisa);
+//        MyThread thread2 = new MyThread("MyThread2", lisa);
+//
+//        thread1.setPriority(Thread.MIN_PRIORITY);
+//        thread2.setPriority(Thread.MAX_PRIORITY);
+//
+//        thread2.start();
+//        thread1.start();
 
 //        thread1.decreaseAge();
 //        thread1.decreaseAge();
@@ -71,13 +74,16 @@ public class TestThread2 {
 
 
         // Different object
-//        Employee Ann = new Employee("Ann", 10);
-//        Employee Bob = new Employee("Bob", 100);
-//        MyThread thread3 = new MyThread("MyThread-Ann ", Ann);
-//        MyThread thread4 = new MyThread("MyThread-Bob ", Bob);
-//
-//        thread3.start();
-//        thread4.start();
+        Employee Ann = new Employee("Ann", 10);
+        Employee Bob = new Employee("Bob", 100);
+        MyThread thread3 = new MyThread("MyThread-Ann ", Ann);
+        MyThread thread4 = new MyThread("MyThread-Bob ", Bob);
+
+        thread3.setPriority(Thread.MIN_PRIORITY);
+        thread4.setPriority(Thread.MAX_PRIORITY);
+
+        thread3.start();
+        thread4.start();
 //
 //        thread4.decreaseAge();
 //        thread3.decreaseAge();
