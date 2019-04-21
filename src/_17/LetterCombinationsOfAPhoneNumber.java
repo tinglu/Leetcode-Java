@@ -31,7 +31,6 @@ public class LetterCombinationsOfAPhoneNumber {
         String[] letters = digitToLetter.get(digit);
         if (letters == null) return result;
 
-
         for (String currLetter : letters) {
             List<String> subresult = helper(digits.substring(1));
 
@@ -42,7 +41,6 @@ public class LetterCombinationsOfAPhoneNumber {
                     result.add(currLetter + followingLetters);
                 }
             }
-
         }
 
         return result;
