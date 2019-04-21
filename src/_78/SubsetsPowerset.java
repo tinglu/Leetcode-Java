@@ -25,26 +25,6 @@ public class SubsetsPowerset {
         return result;
     }
 
-//    public List<List<Integer>> helper(int num, List<List<Integer>> result) {
-//        for (List<Integer> sublist : result) {
-//            List<Integer> tmp = new ArrayList<>(sublist);
-//            sublist.add(num);
-//            result.add(tmp);
-//        }
-//
-//        return result;
-//    }
-
-//    public void helper(int[] nums, List<List<Integer>> result) {
-//        if (nums.length < 1) return;
-//
-//        for (List<Integer> sublist : result) {
-//            sublist.add(nums[0]);
-//        }
-//        helper(nums);
-//    }
-
-
     public static void main(String[] args) {
         SubsetsPowerset sol = new SubsetsPowerset();
 
