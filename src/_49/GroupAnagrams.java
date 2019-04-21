@@ -23,7 +23,7 @@ public class GroupAnagrams {
 
 
 // !!! Anagram -- needs to check not only contain same CHARACTERS but also SAME NUMBER OF EACH CHARACTER!
-// XXX TIME OUT
+// XXX TLE error
 //    public List<List<String>> groupAnagrams(String[] strs) {
 //        boolean[] checked = new boolean[strs.length];
 //
