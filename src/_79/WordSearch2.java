@@ -41,7 +41,7 @@ public class WordSearch2 {
                 || dfs(row + 1, col, word, wIdx + 1, visited)
                 || dfs(row, col - 1, word, wIdx + 1, visited)
                 || dfs(row, col + 1, word, wIdx + 1, visited);
-        visited[row][col] = false;
+        visited[row][col] = false; // !!!!!!! VERY IMPORTANT!!!!!
         return exist;
     }
 
