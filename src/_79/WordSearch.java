@@ -2,7 +2,7 @@ package _79;
 
 import java.util.Arrays;
 
-// TODO
+// TODO: wrong
 class WordSearch {
     char[][] board;
     int rows;
