@@ -3,6 +3,9 @@ package Mock2;
 import java.util.HashSet;
 import java.util.Set;
 
+// 939. Minimum Area Rectangle
+//Time Complexity: O(N^2), where N is the length of points.
+// Space Complexity: O(N).
 public class MinAreaRectangle {
     public int minAreaRect(int[][] points) {
         Set<String> pointSet = new HashSet<>();

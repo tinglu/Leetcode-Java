@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+// 833. Find And Replace in String
 public class FindReplaceString {
 
     public String findReplaceString(String S, int[] indexes, String[] sources, String[] targets) {
@@ -33,7 +34,8 @@ public class FindReplaceString {
 
             System.out.println("idx: " + idx);
             System.out.println("source: " + source);
-            System.out.println("S.indexOf(source): " + S.indexOf(source, to));
+            System.out.println("S.indexOf(source): " + S.indexOf(source, to)); // !!! IMPORTANT - FIND FROM CURRENT
+            // POSITION
 
             if (S.indexOf(source, to) == idx) {
                 if (to > from) {

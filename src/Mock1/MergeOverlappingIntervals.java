@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+// 56. Merge Intervals
 public class MergeOverlappingIntervals {
     public int[][] merge(int[][] intervals) {
         if (intervals.length <= 1) return intervals;

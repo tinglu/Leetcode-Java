@@ -28,6 +28,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 // TODO: Review Later
+
+// 731. My Calendar II
+// Time Complexity: O(N^2), where NN is the number of events booked. For each new event, we process every previous
+//  event to decide whether the new event can be booked.
+// Space Complexity: O(N), the size of the calendar.
 class MyCalendarTwo {
     List<int[]> calendar;
     List<int[]> overlaps;
