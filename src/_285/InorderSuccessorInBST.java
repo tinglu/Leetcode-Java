@@ -1,14 +1,6 @@
 package _285;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
+import Common.TreeNode;
 
 public class InorderSuccessorInBST {
     // Recursion: Don't understand this solution

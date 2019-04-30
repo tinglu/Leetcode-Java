@@ -1,14 +1,6 @@
 package _1026;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
+import Common.TreeNode;
 
 // TODO: could rewrite to make it faster
 public class MaxDiffBtwNodeAndAncestor {
