@@ -11,6 +11,12 @@ import java.util.Set;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+// Read carefully!!!
+//
+//"But 'ivicc' isn't a palindrome!"
+//        If you had this thought, read the question again carefully. We're asking if any permutation of the string
+//        is a palindrome. Spend some extra time ensuring you fully understand the question before starting. Jumping
+//        in with a flawed understanding of the problem doesn't look good in an interview.
 public class PermutationIsPalindrome {
 
     public static boolean hasPalindromePermutation(String theString) {

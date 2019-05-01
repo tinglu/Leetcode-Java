@@ -2,6 +2,7 @@ package HashingAndHashTables;
 
 import java.nio.file.Path;
 
+// TODO: review later
 public class FindDuplicateFiles {
 
     public static String myFunction(String arg) {

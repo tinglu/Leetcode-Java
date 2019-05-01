@@ -12,6 +12,7 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
+// TODO: review later
 public class WordCloud {
 
     public static class WordCloudData {

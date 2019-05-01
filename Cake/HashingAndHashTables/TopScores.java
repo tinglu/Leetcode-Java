@@ -7,6 +7,7 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertArrayEquals;
 
+// TODO: review later
 public class TopScores {
 
     public static int[] sortScores(int[] unorderedScores, int highestPossibleScore) {
