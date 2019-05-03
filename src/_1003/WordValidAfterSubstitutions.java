@@ -4,6 +4,8 @@ import java.util.Stack;
 
 public class WordValidAfterSubstitutions {
 
+    // TODO: Review later - could write shorter code by only check 'c' situation
+    // https://leetcode.com/problems/check-if-word-is-valid-after-substitutions/discuss/247626/JavaPythonC%2B%2B-Stack-Solution-O(N)
     public boolean isValid(String S) {
 
         char[] letters = S.toCharArray();
