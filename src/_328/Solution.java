@@ -1,14 +1,8 @@
 package _328;
 
-class Solution {
-    public class ListNode {
-        int val;
-        ListNode next;
+import Common.ListNode;
 
-        ListNode(int x) {
-            val = x;
-        }
-    }
+class Solution {
 
     private ListNode buildList(ListNode head) {
         if (head != null && head.next != null) {
