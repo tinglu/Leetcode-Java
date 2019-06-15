@@ -5,10 +5,14 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
-import java.util.Arrays;
-
 import static org.junit.Assert.assertArrayEquals;
 
+
+/*
+*
+* O(n) time and O(n)O(n) additional space, where nn is the number of items in the merged array.
+*
+* */
 public class MergeTwoSortedArrays {
 
     public static int[] mergeArrays(int[] myArray, int[] alicesArray) {

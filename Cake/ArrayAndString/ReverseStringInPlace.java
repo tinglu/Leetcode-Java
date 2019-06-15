@@ -7,6 +7,8 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertArrayEquals;
 
+// O(n) time and O(1) space.
+
 public class ReverseStringInPlace {
 
     public static void reverse(char[] arrayOfChars) {

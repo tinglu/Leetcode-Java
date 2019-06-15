@@ -9,6 +9,12 @@ import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+// TODO
+
+// Greedy approach
+// Time: n*log(n)
+// Space: O(n)
+
 public class MergeMeetings {
 
     public static class Meeting {

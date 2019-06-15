@@ -8,6 +8,12 @@ import org.junit.runner.notification.Failure;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+
+/*
+*
+* O(n) time and O(1) additional space.
+*
+* */
 public class SingleRiffleShuffle {
 
 //    public static boolean isSingleRiffle(int[] half1, int[] half2, int[] shuffledDeck) {
