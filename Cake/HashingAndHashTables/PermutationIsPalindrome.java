@@ -11,6 +11,20 @@ import java.util.Set;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+/*
+*
+* O(n) time, since we're making one iteration through the n characters in the string.
+
+Our unpairedCharacters hash set is the only thing taking up non-constant space. We could say our space cost is O(n)
+as well, since the set of unique characters is less than or equal to nn. But we can also look at it this way:
+there are only so many different characters. How many? The ASCII character set has just 128 different characters
+(standard english letters and punctuation), while Unicode has 110,000 (supporting several languages and some
+icons/symbols). We might want to treat our number of possible characters in our character hash set as another
+variable kk and say our space complexity is O(k)O(k). Or we might want to just treat it as a constant, and say our
+space complexity is O(1).
+*
+*
+* */
 // Read carefully!!!
 //
 //"But 'ivicc' isn't a palindrome!"

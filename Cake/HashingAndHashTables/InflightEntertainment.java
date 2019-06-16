@@ -11,6 +11,11 @@ import java.util.Set;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+/*
+*
+* O(n) time, and O(n) space
+*
+* */
 public class InflightEntertainment {
 
     public static boolean canTwoMoviesFillFlight(int[] movieLengths, int flightLength) {
