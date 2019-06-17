@@ -7,6 +7,13 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertArrayEquals;
 
+
+// TODO: rewrite this!!!
+/*
+ *
+ * O(n) time and O(n) space.
+ *
+ * */
 public class ProductOfAllOtherNumbers {
 
     // My solution - 3 arrays and 3 for loops
@@ -52,6 +59,12 @@ public class ProductOfAllOtherNumbers {
     public static int[] getProductsOfAllIntsExceptAtIndex(int[] intArray) {
 
         // make an array of the products
+
+        /*
+         *
+         *  NO OTHER INTEGER TO MULTIPLY IF LENGTH IS < 2!!!
+         *
+         * */
         if (intArray.length < 2) throw new IllegalArgumentException("array has less than 2 items");
 
         int[] productsExceptThisIdx = new int[intArray.length];

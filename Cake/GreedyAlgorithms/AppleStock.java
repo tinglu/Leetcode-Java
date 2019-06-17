@@ -7,6 +7,11 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertEquals;
 
+/*
+ *
+ * O(n) time and O(1) space.
+ *
+ * */
 public class AppleStock {
 
     public static int getMaxProfit(int[] stockPrices) {

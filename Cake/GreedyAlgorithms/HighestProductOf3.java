@@ -7,6 +7,12 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertEquals;
 
+
+/*
+ *
+ * O(n) time and O(1) additional space.
+ *
+ * */
 public class HighestProductOf3 {
 
     // TODO: my strategy is different from the solution

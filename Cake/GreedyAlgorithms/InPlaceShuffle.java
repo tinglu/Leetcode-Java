@@ -3,6 +3,12 @@ package GreedyAlgorithms;
 import java.util.Arrays;
 import java.util.Random;
 
+
+/*
+ *
+ * O(n) time and O(1) space.
+ *
+ * */
 public class InPlaceShuffle {
 
     private static Random rand = new Random();
