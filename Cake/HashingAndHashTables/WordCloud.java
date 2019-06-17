@@ -13,6 +13,14 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 
 // TODO: review later
+
+/*
+ *
+ * Runtime and memory cost are both O(n). This is the best we can do because we have to look at every character in
+ * the input string and we have to return a hash map of every unique word. We optimized to only make one pass over
+ * our input and have only one O(n) data structure.
+ *
+ * */
 public class WordCloud {
 
     public static class WordCloudData {

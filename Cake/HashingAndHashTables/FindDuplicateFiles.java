@@ -3,6 +3,13 @@ package HashingAndHashTables;
 import java.nio.file.Path;
 
 // TODO: review later
+
+/*
+ *
+ * Each "fingerprint" takes O(1) time and space, so our total time and space costs are O(n) where nn is the
+ * number of files on the file system.
+ *
+ * */
 public class FindDuplicateFiles {
 
     public static String myFunction(String arg) {

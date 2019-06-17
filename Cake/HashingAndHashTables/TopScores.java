@@ -7,7 +7,14 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertArrayEquals;
 
-// TODO: review later
+/*
+ *
+ * O(n) time and O(n) space, where nn is the number of scores.
+ *
+ * If we didn't treat highestPossibleScore as a constant, we could call it kk and say we have O(n+k) time and O(n+k)
+ * space.
+ *
+ * */
 public class TopScores {
 
     public static int[] sortScores(int[] unorderedScores, int highestPossibleScore) {
