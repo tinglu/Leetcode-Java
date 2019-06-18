@@ -48,6 +48,19 @@ public class GraphColouring {
         }
     }
 
+
+    /*
+     * !!!!!!!!!!!TODO: read the time complexity analysis again
+     *
+     *
+     * O(N+M) time where N is the number of nodes and M is the number of edges.
+     *
+     *
+     * The only thing we're storing is the illegalColors hash set. In the worst case, all the neighbors of a node
+     * with the maximum degree (D) have different colors, so our hash set takes up O(D) space.
+     *
+     *
+     * */
     public static void colorGraph(GraphNode[] graph, String[] colors) {
 
         // create a valid coloring for the graph

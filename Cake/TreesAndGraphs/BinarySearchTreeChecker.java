@@ -8,6 +8,12 @@ import org.junit.runner.notification.Failure;
 import static junit.framework.TestCase.assertTrue;
 import static org.testng.AssertJUnit.assertFalse;
 
+// TODO: review later - need two bounds: upper & lower!
+/*
+*
+* O(n) time and O(n)O(n) space.
+*
+* */
 public class BinarySearchTreeChecker {
 
     public static class BinaryTreeNode {

@@ -30,9 +30,88 @@ public class SecondLargestInBinarySearchTree {
         }
     }
 
+
+    /*
+     *
+     * My solution - this logic is not sound
+     *
+     * */
+//    public static int findSecondLargest(BinaryTreeNode rootNode) {
+//        if (rootNode == null || rootNode.left == null && rootNode.right == null)
+//            throw new IllegalArgumentException("at least 2 nodes to get the second largest");
+//
+//        return helper(rootNode, rootNode.value);
+//    }
+//
+//    private static int helper(BinaryTreeNode rootNode, int potential) {
+//        if (rootNode.right != null) {
+//            return helper(rootNode.right, rootNode.value);
+//        }
+//        if (rootNode.left != null) {
+//            return rootNode.left.value;
+//        }
+//        return potential;
+//    }
+
+
+    /*
+     * TODO - review interview cake solution below
+     *
+     * if the current node has a left subtree - then the second largest must be the first largest
+     * node in the left subtree;
+     * if the current node has a right subtree and the right node is the leaf - then the current node is the second
+     * largest
+     *
+     *
+     *
+     * We're doing one walk down our BST, which means O(h) time, where hh is the height of the tree (again,
+     * that's O(lgn) if the tree is balanced, O(n) otherwise). O(1) space.
+     *
+     *
+     *
+     * Here we used a "simplify, solve, and adapt" strategy.
+     *
+     *
+     * */
+    private static int findLargest1(BinaryTreeNode rootNode) {
+        BinaryTreeNode current = rootNode;
+        while (current.right != null) {
+            current = current.right;
+        }
+        return current.value;
+    }
+
+    public static int findSecondLargest1(BinaryTreeNode rootNode) {
+        if (rootNode == null || (rootNode.left == null
+                && rootNode.right == null)) {
+            throw new IllegalArgumentException("Tree must have at least 2 nodes");
+        }
+
+        BinaryTreeNode current = rootNode;
+
+        while (true) {
+
+            // case: current is largest and has a left subtree
+            // 2nd largest is the largest in that subtree
+            if (current.left != null && current.right == null) {
+                return findLargest1(current.left);
+            }
+
+            // case: current is parent of largest, and largest has no children,
+            // so current is 2nd largest
+            if (current.right != null &&
+                    current.right.left == null &&
+                    current.right.right == null) {
+                return current.value;
+            }
+
+            current = current.right;
+        }
+    }
+
     // !!!
     private static int findLargest(BinaryTreeNode node) {
-        if (node == null)  throw new IllegalArgumentException("must have at least 1 node");
+        if (node == null) throw new IllegalArgumentException("must have at least 1 node");
 
         if (node.right != null) {
             return findLargest(node.right);
@@ -40,7 +119,6 @@ public class SecondLargestInBinarySearchTree {
         return node.value;
     }
 
-    // TODO
     public static int findSecondLargest(BinaryTreeNode rootNode) {
 
         // find the second largest item in the binary search tree
@@ -51,12 +129,22 @@ public class SecondLargestInBinarySearchTree {
 
         BinaryTreeNode current = rootNode;
         while (true) {
-            if ( current.left != null && current.right == null) {
+            if (current.left != null && current.right == null) {
+                /*
+                 *
+                 *
+                 * !!!!! if the current node has a left subtree - then the second largest must be the first largest
+                 * node in the left subtree!!!!!!
+                 *
+                 *
+                 * */
                 return findLargest(current.left);
             }
 
             // current node only has a right leaf!!!
-            if (current.right != null && current.right.right == null && current.right.left == null) {
+            if (current.right != null
+                    && current.right.right == null
+                    && current.right.left == null) {
                 return current.value;
             }
 

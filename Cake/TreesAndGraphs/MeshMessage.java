@@ -20,7 +20,19 @@ class Neighbour {
     }
 }
 
-// TODO
+// !!!!!!!!!!!TODO Finish this!!!!!!!!!!!!!
+/*
+ *
+ *
+ * the complexity of the breadth-first search is O(N+M).
+ * the total time complexity of our backtracking step is O(N).
+ *
+ * Putting these together, the time complexity of our entire algorithm is O(N+M)O(N+M).
+ *
+ *
+ * overall space complexity is O(N).
+ *
+ * */
 public class MeshMessage {
 
 
@@ -61,7 +73,8 @@ public class MeshMessage {
                         for (String s : graph.get(next.name)) {
                             if (!visited.contains(s)) {
 //                                System.out.println("next.name: " + next.name);
-//                                System.out.println("route: " + Arrays.toString(next.route.toArray(new String[next.route.size()])));
+//                                System.out.println("route: " + Arrays.toString(next.route.toArray(new String[next
+//                                .route.size()])));
                                 Neighbour neighbour = new Neighbour(s, next.route);
                                 connections.add(neighbour);
                             }

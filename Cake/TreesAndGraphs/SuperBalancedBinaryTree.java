@@ -8,6 +8,16 @@ import org.junit.runner.notification.Failure;
 import static junit.framework.TestCase.assertTrue;
 import static org.testng.AssertJUnit.assertFalse;
 
+/*
+* TODO: review later
+*
+*
+* O(n) time and O(n)O(n) space.
+*
+*
+* Slightly different from the solution
+*
+* */
 public class SuperBalancedBinaryTree {
 
     public static class BinaryTreeNode {
