@@ -7,6 +7,20 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertEquals;
 
+/*
+ *
+ * Each time we go through the while loop, we cut our range of indices in half, just like binary search. So we have O
+ * (lgn) loop iterations.
+ *
+ *
+ * Some languages—like German, Russian, and Dutch—can have arbitrarily long words, so we might want to factor the
+ * length of the words into our runtime. We could say the length of the words is l, each string comparison takes
+ * O(l) time, and the whole algorithm takes O(l * lgn) time.
+ *
+ *
+ *
+ * We use O(1) space to store the first word and the floor and ceiling indices.
+ * */
 public class FindRotationPoint {
 
     public static int findRotationPoint(String[] words) {
@@ -18,6 +32,11 @@ public class FindRotationPoint {
         while (start < end) {
             int mid = (start + end) / 2;
 
+            /*
+            *
+            * Just need to compare with the first word!!!!!!!!!
+            *
+            * */
             if (words[mid].compareTo(words[0]) < 0) {
                 // go left
                 end = mid;
@@ -29,6 +48,13 @@ public class FindRotationPoint {
                 break; // !!!!!!!!!
             }
         }
+
+        /*
+        *
+        *
+        * return the end!!!!
+        *
+        * */
         return end;
     }
 

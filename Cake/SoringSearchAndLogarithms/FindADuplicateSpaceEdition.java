@@ -44,8 +44,12 @@ public class FindADuplicateSpaceEdition {
 //        throw new IllegalArgumentException("No duplicates");
 
 
-        // (3) NEED TO OPTIMISE SPACE!!!
-        // O(1) space and O(nlgn) time.
+        // !!!!!!!!TODO!!!!!!!!!: review later (3) NEED TO OPTIMISE SPACE!!!
+        /*
+        *
+        * O(1) space and O(nlgn) time.
+        *
+        * */
         int floor = 1; // !!!!!!! Floor should start from 1 because integers range is 1..n
         int ceiling = theArray.length - 1;
 
