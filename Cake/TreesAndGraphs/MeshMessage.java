@@ -20,7 +20,7 @@ class Neighbour {
     }
 }
 
-// !!!!!!!!!!!TODO Finish this!!!!!!!!!!!!!
+// !!!!!!!!!!!TODO: review later
 /*
  *
  *
@@ -35,84 +35,90 @@ class Neighbour {
  * */
 public class MeshMessage {
 
-
     public static String[] getPath(Map<String, String[]> graph, String startNode, String endNode) {
 
         // find the shortest route in the network between the two users
 
-        if (!graph.containsKey(startNode)) return null;
+        if (!graph.containsKey(startNode) || !graph.containsKey(endNode))
+            throw new IllegalArgumentException("Invalid start or end node");
+
+        Map<String, String> howArriveHere = new HashMap<>();
+        howArriveHere.put(startNode, null); // start point; also avoid going back to the start
 
 
-        Queue<Neighbour> connections = new ArrayDeque<>();
-        for (String s : graph.get(startNode)) {
-            List<String> route = new LinkedList<>();
-            route.add(startNode);
-            Neighbour neighbour = new Neighbour(s, route);
-            connections.add(neighbour);
-        }
-
-        Set<String> visited = new HashSet<>();
-        visited.add(startNode);
-//        System.out.println("Visited: " + visited);
+        /*
+         *
+         * This is DFS actually!!!!!
+         *
+         * */
+//        if (bfs(graph, startNode, endNode, howArriveHere)) {
+//            return buildPath(howArriveHere, startNode, endNode);
+//        }
 
 
-//        helper(graph, connections, route, endNode, visited);
 
-        while (!connections.isEmpty()) {
-            Neighbour next = connections.remove();
+        /*
+         *
+         * Write proper BFS using queue!!!!!
+         *
+         *
+         * ONLY BFS GUARANTEES TO GET SHORTEST PATH!
+         *
+         * */
+        Queue<String> toVisit = new ArrayDeque<>();
+        toVisit.add(startNode);
 
-//            System.out.println("\nVisited: " + visited);
-//            System.out.println("next: " + next.name);
-            if (!visited.contains(next.name)) {
-                if (next.name.equals(endNode)) {
-                    String[] r = next.route.toArray(new String[next.route.size()]);
-//                    System.out.println(Arrays.toString(r));
-                    return r;
-                } else {
-                    if (graph.containsKey(next.name)) {
-                        for (String s : graph.get(next.name)) {
-                            if (!visited.contains(s)) {
-//                                System.out.println("next.name: " + next.name);
-//                                System.out.println("route: " + Arrays.toString(next.route.toArray(new String[next
-//                                .route.size()])));
-                                Neighbour neighbour = new Neighbour(s, next.route);
-                                connections.add(neighbour);
-                            }
+        while (!toVisit.isEmpty()) {
+            String curr = toVisit.poll();
 
-                        }
-                    } else {
-                        throw new IllegalArgumentException("not find this person");
-                    }
-                }
-
-                visited.add(next.name);
+            if (curr.equals(endNode)) {
+                return buildPath(howArriveHere, startNode, endNode);
             }
 
+            for (String next : graph.get(curr)) {
+                if (!howArriveHere.containsKey(next)) {
+                    howArriveHere.put(next, curr);
+                    toVisit.add(next);
+                }
+            }
         }
 
         return null;
     }
 
-//    private static void helper(Map<String, String[]> graph, Queue<String> connections, List<String> route,
-//                               String endNode, Set<String> visited) {
-//        while (!connections.isEmpty()) {
-//            String next = connections.poll();
-//            if (!visited.contains(next)) {
-//                route.add(next);
-//                if (next.equals(endNode)) {
-//                    break;
-//                } else {
-//                    if (graph.containsKey(next)) {
-//                        Collections.addAll(connections, graph.get(next));
-//                        visited.add(next);
-//                        helper(graph, connections, route, endNode, visited);
-//                    }
-//                }
-//            } else {
-//                helper(graph, connections, route, endNode, visited);
-//            }
+    private static String[] buildPath(Map<String, String> howArriveHere, String startNode, String endNode) {
+        List<String> path = new ArrayList<>();
+        String currNode = endNode;
+
+        while (!currNode.equals(startNode)) {
+            path.add(currNode);
+            currNode = howArriveHere.get(currNode);
+        }
+
+        path.add(startNode);
+        Collections.reverse(path);
+        return path.toArray(new String[path.size()]);
+    }
+
+    /*
+     *
+     * This is DFS actually!!!!!
+     *
+     * */
+//    private static boolean bfs(Map<String, String[]> graph, String startNode, String endNode,
+//                               Map<String, String> howArriveHere) {
 //
+//        if (startNode.equals(endNode)) return true;
+//
+//        if (graph.get(startNode) == null) return false;
+//
+//        for (String next : graph.get(startNode)) {
+//            if (!howArriveHere.containsKey(next)) {
+//                howArriveHere.put(next, startNode);
+//                if (bfs(graph, next, endNode, howArriveHere)) return true;
+//            }
 //        }
+//        return false;
 //    }
 
 
