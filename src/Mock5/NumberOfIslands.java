@@ -1,6 +1,8 @@
 package Mock5;
 
 /*
+ * https://leetcode.com/problems/number-of-islands/
+ * 200. Number of Islands
  *
  * TODO: review later
  *
@@ -28,10 +30,10 @@ public class NumberOfIslands {
                 if (grid[r][c] == '1') {
 
                     /*
-                    *
-                    * if there is a start point with value 1 - then there is an island!!!!
-                    *
-                    * */
+                     *
+                     * if there is a start point with value 1 - then there is an island!!!!
+                     *
+                     * */
                     result += 1;
 
                     dfs(grid, r, c, rows, cols);

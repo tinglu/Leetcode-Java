@@ -5,10 +5,10 @@ import java.util.*;
 public class GroupShiftedStrings {
 
     /*
-    *
-    * Cannot use set - should keep all same strings!
-    *
-    * */
+     *
+     * Cannot use set - should keep all same strings!
+     *
+     * */
 //    public List<List<String>> groupStrings(String[] strings) {
 //        Map<Integer, Set<String>> stringByLength = new HashMap<>();
 //        for (String str : strings) {
@@ -64,14 +64,16 @@ public class GroupShiftedStrings {
 
 
     /*
-    *
-    *
-    * My solution is correct...
-    *
-    * TODO!!!: but redo this using diff as keys (similar to 49. Group Anagrams?)
-    *
-    *
-    * */
+     *
+     * https://leetcode.com/problems/group-shifted-strings/
+     * 249. Group Shifted Strings
+     *
+     * My solution is correct...
+     *
+     * TODO!!!: but redo this using diff as keys (similar to 49. Group Anagrams?)
+     *
+     *
+     * */
     public List<List<String>> groupStrings(String[] strings) {
         Map<Integer, List<String>> stringByLength = new HashMap<>();
         for (String str : strings) {

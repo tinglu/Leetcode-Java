@@ -2,13 +2,15 @@ package Mock5;
 
 
 /*
-*
-* Wrong solution
-*
-* TODO!!!!!: finish this later!!!!!
-*
-*
-* */
+ *
+ * Wrong solution
+ *
+ * TODO!!!!!: finish this later!!!!!
+ *
+ * https://leetcode.com/problems/sentence-screen-fitting/
+ * 418. Sentence Screen Fitting
+ *
+ * */
 public class SentenceScreenFitting {
     int remRow;
     int remCol;
