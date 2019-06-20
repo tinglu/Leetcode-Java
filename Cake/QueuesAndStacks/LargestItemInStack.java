@@ -10,6 +10,15 @@ import java.util.Stack;
 
 import static org.junit.Assert.assertEquals;
 
+
+/*
+ * TODO: review later - good strategy by maintaining a maxes stack!
+ *
+ * O(1) time for push(), pop(), and getMax().
+ *
+ * O(m) additional space, where m is the number of operations performed on the stack.
+ *
+ * */
 public class LargestItemInStack {
 
     // fill in the definitions for push(), pop(), and getMax()
@@ -43,7 +52,7 @@ public class LargestItemInStack {
 
         public void push(int item) {
             stack.push(item);
-            if (maxes.isEmpty() || item >= maxes.peek()){ // !!! >= is important!!!
+            if (maxes.isEmpty() || item >= maxes.peek()) { // !!! >= is important!!!
                 maxes.add(item);
             }
         }

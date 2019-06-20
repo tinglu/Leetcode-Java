@@ -10,6 +10,13 @@ import java.util.Stack;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+/*
+ *
+ * O(n) time (one iteration through the string)
+ *
+ * O(n) space (in the worst case, all of our characters are openers, so we push them all onto the stack).
+ *
+ * */
 public class BracketValidator {
 
     public static boolean isValid(String code) {
