@@ -13,6 +13,59 @@ import static org.junit.Assert.assertEquals;
 
 public class RecursiveStringPermutation {
 
+//    public static Set<String> getPermutations(String inputString) {
+//        Set<String> letters = new HashSet<>();
+//        for (int i = 0; i < inputString.length(); i++) {
+//            letters.add(inputString.substring(i, i + 1));
+//        }
+//        return helper(letters, 0);
+//    }
+//
+//    private static Set<String> helper(Set<String> letters, int from) {
+//        if (letters.size() == 0) return new HashSet<>();
+//
+//        Set<String> permutations = new HashSet<>();
+//
+////        Set<String> substrings = helper(inputString, from + 1);
+//
+//        Iterator<String> iter = letters.iterator();
+//        while(iter.hasNext()) {
+//
+//        }
+//
+//        for (int i = from; i < inputString.length(); i++) {
+//            if (substrings.isEmpty()) {
+//                permutations.add(inputString.substring(i, i + 1));
+//            } else {
+//                for (String sub : substrings) {
+//                    permutations.add(inputString.substring(i, i + 1) + sub);
+//                }
+//            }
+//        }
+//        return permutations;
+//    }
+
+
+    /*
+     *
+     * !!!!! TODO: finish this using interview cake's solution
+     *
+     * a permutation of the current word is adding the char into each position among characters
+     *
+     * */
+//    public static Set<String> getPermutations(String inputString) {
+//        char[] letters = inputString.toCharArray();
+//
+//
+//    }
+
+    /*
+     *
+     * Below is my solution - correct!
+     *
+     * But interview cake's solution is cleaner
+     *
+     * */
     public static Set<String> getPermutations(String inputString) {
 
         // generate all permutations of the input string

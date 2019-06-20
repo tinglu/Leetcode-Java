@@ -7,6 +7,12 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertEquals;
 
+/*
+ *
+ * O(n) time and O(1) space.
+ *
+ *
+ * */
 public class NthFibonacciNumber {
 
     public static int fib(int n) {

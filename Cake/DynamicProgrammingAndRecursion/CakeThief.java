@@ -7,7 +7,12 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertEquals;
 
-// TODO
+// TODO: review later
+/*
+ *
+ * O(n*k) time, and O(k) space, where n is number of types of cake and k is the capacity of the duffel bag.
+ *
+ * */
 public class CakeThief {
 
     public static class CakeType {
@@ -25,8 +30,26 @@ public class CakeThief {
 
         // calculate the maximum value that we can carry
 
+        long[] dp = new long[weightCapacity + 1]; // range (0, weightCapacity)
 
-        return 0;
+        for (int capacity = 0; capacity <= weightCapacity; capacity++) {
+            long max = 0;
+
+            for (CakeType cake : cakeTypes) {
+                if (cake.weight == 0 && cake.value != 0) throw new IllegalArgumentException("Max value is infinity!");
+
+                if (cake.weight <= capacity) {
+
+                    /*
+                     * TODO - pay attention to how to do comparison
+                     * */
+                    max = Math.max(max, cake.value + dp[capacity - cake.weight]);
+                }
+            }
+            dp[capacity] = max;
+        }
+//        System.out.println(Arrays.toString(dp));
+        return dp[weightCapacity];
     }
 
 

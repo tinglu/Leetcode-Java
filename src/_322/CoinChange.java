@@ -5,7 +5,7 @@ import java.util.Arrays;
 // TODO: review later
 /*
  *
- * 322. Coin Change
+ * 322. Coin Change (minimum coins to make change)
  * https://leetcode.com/problems/coin-change/
  *
  *
@@ -28,7 +28,7 @@ public class CoinChange {
          * IMPORTANT: pre-set the max number to (amount + 1), which is impossible because the max number of coins
          * needed is the "amount" N using $1 coins.
          * */
-        int max = amount + 1;
+        int max = amount + 1; // So when calling Math.min() --> it always choose the correct smaller number
         Arrays.fill(memo, max);
 
 

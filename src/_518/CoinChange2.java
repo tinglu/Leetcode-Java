@@ -3,7 +3,7 @@ package _518;
 // TODO: review later
 /*
  *
- * 518. Coin Change 2
+ * 518. Coin Change 2 (Unique ways to make change)
  * https://leetcode.com/problems/coin-change-2/
  *
  * */
