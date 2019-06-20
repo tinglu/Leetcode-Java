@@ -7,6 +7,11 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertSame;
 
+/*
+ *
+ * O(n) time and O(1)O(1) space
+ * 
+ * */
 public class KthToLastNode {
 
     public static class LinkedListNode {

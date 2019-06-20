@@ -7,6 +7,11 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.*;
 
+/*
+ *
+ * TODO: review later
+ *
+ * */
 public class ReverseLinkedList {
 
     public static class LinkedListNode {
@@ -19,13 +24,21 @@ public class ReverseLinkedList {
         }
     }
 
-    public static LinkedListNode reverse(LinkedListNode headOfList) {
+    /*
+     *
+     * TODO: review this later using O(1) space!!!!!
+     *
+     * O(n) time and O(1) space
+     *
+     * */
+    public static LinkedListNode reverse1(LinkedListNode headOfList) {
 
         // reverse the linked list !!!in place!!!
         LinkedListNode prevNode = null;
         LinkedListNode currNode = headOfList;
         LinkedListNode nextNode; // nextNode is read in while loop!!!
 
+        // until we have 'fallen off' the end of the list
         while (currNode != null) {
 
             // Read new nextNode before changing old nextNode's next pointer!!!
@@ -41,6 +54,24 @@ public class ReverseLinkedList {
 
         // prevNode is the new head
         return prevNode;
+    }
+
+
+    /*
+     *
+     * Recursion way
+     * */
+    public static LinkedListNode reverse(LinkedListNode headOfList) {
+
+        if (headOfList == null) return null;
+
+        LinkedListNode next = headOfList.next;
+        if (next == null) return headOfList;
+
+        LinkedListNode newHead = reverse(next);
+        headOfList.next = null;
+        next.next = headOfList;
+        return newHead;
     }
 
 

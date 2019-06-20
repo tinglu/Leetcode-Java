@@ -8,6 +8,14 @@ import org.junit.runner.notification.Failure;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
+
+/*
+ *
+ * O(1) time and O(1) space.
+ *
+ * in-place operation - has side effect!!!
+ *
+ * */
 public class DeleteNode {
 
     public static class LinkedListNode {

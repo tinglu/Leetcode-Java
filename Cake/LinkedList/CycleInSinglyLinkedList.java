@@ -8,6 +8,11 @@ import org.junit.runner.notification.Failure;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+/*
+ *
+ * O(1) time and O(1)O(1) space.
+ *
+ * */
 public class CycleInSinglyLinkedList {
 
     public static class LinkedListNode {
