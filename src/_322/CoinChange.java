@@ -1,20 +1,23 @@
 package _322;
 
-
 import java.util.Arrays;
 
 // TODO: review later
 /*
-*
-* DP: BOTTOM-UP
-*
-*
-* Time complexity : O(S*n). On each step the algorithm finds the next F(i) in nn iterations, where 1 < i < S.
-* Therefore in total the iterations are S*n.
-*
-* Space complexity : O(S). We use extra space for the memoization table.
-*
-* */
+ *
+ * 322. Coin Change
+ * https://leetcode.com/problems/coin-change/
+ *
+ *
+ * DP: BOTTOM-UP
+ *
+ *
+ * Time complexity : O(S*n). On each step the algorithm finds the next F(i) in nn iterations, where 1 < i < S.
+ * Therefore in total the iterations are S*n.
+ *
+ * Space complexity : O(S). We use extra space for the memoization table.
+ *
+ * */
 public class CoinChange {
 
     public int coinChange(int[] coins, int amount) {
@@ -30,12 +33,12 @@ public class CoinChange {
 
 
         /*
-        *
-        * Start with 0
-        *
-        * !!!!! this line MUST BE AFTER Arrays.fill(memo, max); !!!!
-        *
-        * */
+         *
+         * Start with 0
+         *
+         * !!!!! this line MUST BE AFTER Arrays.fill(memo, max); !!!!
+         *
+         * */
         memo[0] = 0;
 
         for (int i = 1; i <= amount; i++) {
