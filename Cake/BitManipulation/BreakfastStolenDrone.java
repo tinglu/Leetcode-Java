@@ -7,6 +7,19 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertEquals;
 
+
+/*
+ *
+ * TODO: review later
+ *
+ * We XOR all the integers in the array.
+ * We start with a variable uniqueDeliveryId set to 0.
+ * Every time we XOR with a new ID, it will change the bits.
+ * When we XOR with the same ID again, it will cancel out the earlier change.
+ *
+ * O(n) time, and O(1)O(1) space.
+ *
+ * */
 public class BreakfastStolenDrone {
 
     public static int findUniqueDeliveryId(int[] deliveryIds) {
