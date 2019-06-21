@@ -8,13 +8,14 @@ import org.junit.runner.notification.Failure;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+
 public class TemperatureTracker {
 
     static class TempTracker {
 
         // fill in the TempTracker class methods below
 
-        // !!! O(1) time for each method, and O(1)O(1) space related to input!
+        // !!! O(1) time for each method, and O(1) space related to input!
 
         // For mean
         int count = 0;

@@ -7,6 +7,11 @@ import org.junit.runner.notification.Failure;
 
 import static org.junit.Assert.assertEquals;
 
+/*
+ *
+ * O(1) time and O(1)O(1) space.
+ *
+ * */
 public class RectangularLove {
 
     public static class Rectangle {
