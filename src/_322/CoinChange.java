@@ -55,5 +55,6 @@ public class CoinChange {
     public static void main(String[] args) {
         CoinChange sol = new CoinChange();
         System.out.println(sol.coinChange(new int[]{1, 2, 5}, 11));
+        System.out.println(sol.coinChange(new int[]{1, 2, 5}, 5));
     }
 }

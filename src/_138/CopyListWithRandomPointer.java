@@ -36,7 +36,6 @@ public class CopyListWithRandomPointer {
 
             Node next = orgNode.next;
             Node random = orgNode.random;
-            int val = orgNode.val;
 
 
             Node newNext;
