@@ -1,7 +1,7 @@
 package Common;
 
 public class UnionFind {
-    int[] parent;
+    public int[] parent;
 
     public UnionFind(int N) {
         parent = new int[N];
