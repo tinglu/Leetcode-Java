@@ -30,8 +30,9 @@ public class LongestSubstringAtMostKDistinctCharacters {
             if (window.size() == k + 1) {
                 /*
                  * Just added a new distinct letter
+                 *
+                 * TODO: atch out here - shrink left by deleting the leftmost character which makes window invalid !!!
                  * */
-                // shrink left by deleting the leftmost character
                 int leftmostCh = Collections.min(window.values());
                 window.remove(s.charAt(leftmostCh));
 
@@ -40,6 +41,7 @@ public class LongestSubstringAtMostKDistinctCharacters {
 
             /*
              * TODO: reivew later - watch out here - check max every time rather than only checking inside if block !!!
+             *  Check when window is still valid !!!
              * */
             max = Math.max(max, right - left + 1);
 

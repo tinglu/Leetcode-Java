@@ -18,6 +18,8 @@ public class PalindromePairsRevised {
             map.put(words[i], i);
         }
 
+        System.out.println(map);
+
         //special cases: "" can be combine with any palindrome string
         if (map.containsKey("")) {
             int blankIdx = map.get("");
@@ -45,10 +47,13 @@ public class PalindromePairsRevised {
         //case2 : s1[cut+1:] is palindrome and s1[0:cut] = reverse(s2) => (s1, s2)
         for (int i = 0; i < words.length; i++) {
             String cur = words[i];
+            System.out.println("\ncur: " + cur);
             for (int cut = 1; cut < cur.length(); cut++) {
                 if (isPalindrome(cur.substring(0, cut))) {
                     String cut_r = reverseStr(cur.substring(cut));
                     if (map.containsKey(cut_r)) {
+                        System.out.println("cur.substring(0, cut): " + cur.substring(0, cut));
+                        System.out.println("cut_r: " + cut_r);
                         int found = map.get(cut_r);
                         if (found == i) continue;
                         res.add(Arrays.asList(found, i));
@@ -57,6 +62,8 @@ public class PalindromePairsRevised {
                 if (isPalindrome(cur.substring(cut))) {
                     String cut_r = reverseStr(cur.substring(0, cut));
                     if (map.containsKey(cut_r)) {
+                        System.out.println("cur.substring(cut): " + cur.substring(cut));
+                        System.out.println("cut_r: " + cut_r);
                         int found = map.get(cut_r);
                         if (found == i) continue;
                         res.add(Arrays.asList(i, found));
@@ -87,7 +94,7 @@ public class PalindromePairsRevised {
     }
 
     public static void main(String[] args) {
-        PalindromePairs sol = new PalindromePairs();
+        PalindromePairsRevised sol = new PalindromePairsRevised();
         String[] A = {"abcd", "dcba", "lls", "s", "sssll"};
 //        String[] A = {"a", "b", "c", "ab", "ac", "aa"};
         List<List<Integer>> result = sol.palindromePairs(A);

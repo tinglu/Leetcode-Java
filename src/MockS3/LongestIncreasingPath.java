@@ -115,7 +115,8 @@ public class LongestIncreasingPath {
          * TODO: review later - memo[r][c] needs to be ++ because the current value is for the adjacent cells !!!
          *  should add cell[r][c] itself
          * */
-        return ++memo[r][c];
+        memo[r][c]++;
+        return memo[r][c];
     }
 
     public static void main(String[] args) {
