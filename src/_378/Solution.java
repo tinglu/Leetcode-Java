@@ -1,7 +1,16 @@
 package _378;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+
+/*
+ *
+ * TODO: review this discussion solution !!!
+ * https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/discuss/301357/Java-0ms-
+ * (added-Python-and-C%2B%2B)%3A-Easy-to-understand-solutions-using-Heap-and-Binary-Search
+ *
+ * */
+
+
 
 class Solution {
 
@@ -39,10 +48,8 @@ class Solution {
     public int kthSmallest(int[][] matrix, int k) {
         int[] merged = mergeMatrix(matrix);
         System.out.println(Arrays.toString(merged));
-        return merged[k-1];
+        return merged[k - 1];
     }
-
-
 
 
 //    Wrong!!!
